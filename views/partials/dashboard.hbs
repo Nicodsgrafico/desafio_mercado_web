@@ -1,0 +1,13 @@
+<!-- dashboard.hbs -->
+
+<div>
+    <h2>Productos</h2>
+    <ul>
+        {{#each listado.articulos}} <!-- Iterar sobre el array de productos -->
+            <li>
+                <img src="{{this.imagen}}" alt="{{this.nombre}}" style="width: 100px;"> <!-- Mostrar la imagen -->
+                {{this.nombre}} <!-- Mostrar el nombre del producto -->
+            </li>
+        {{/each}}
+    </ul>
+</div>

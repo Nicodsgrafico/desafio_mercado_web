@@ -1,0 +1,28 @@
+{
+    "articulos": [
+      {
+        "nombre": "banana",
+        "imagen": "assets/img/banana.png"
+      },
+      {
+        "nombre": "cebollas",
+        "imagen": "assets/img/cebollas.png"
+      },
+      {
+        "nombre": "lechuga",
+        "imagen": "assets/img/lechuga.png"
+      },
+      {
+        "nombre": "papas",
+        "imagen": "assets/img/papas.png"
+      },
+      {
+        "nombre": "pimenton",
+        "imagen": "assets/img/pimenton.png"
+      },
+      {
+        "nombre": "tomate",
+        "imagen": "assets/img/tomate.png"
+      }
+    ]
+  }  
