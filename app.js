@@ -30,16 +30,18 @@ app.engine( //app.engine() es un método que permite configurar el motor de plan
     'hbs', //nombre del motor de plantillas 
     exphbs.engine({ //exphbs.engine() es un método que permite configurar el motor de plantillas Handlebars
         layoutsDir: __dirname + '/views', //Directorio de los layouts
+        partialsDir: __dirname + '/views/partials', //Directorio de los parciales
         extname: '.hbs',//Extensión de los archivos de plantillas
     })
 );
-// Middleware para servir archivos estáticos (Bootstrap y jQuery)
-app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')));
-app.use('/jquery', express.static(path.join(__dirname, 'node_modules/jquery/dist')));
+// Middleware para servir archivos estáticos
+app.use('/bootstrap',express.static(__dirname + '/node_modules/bootstrap/dist/css'));
+app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist'));
+app.use('/assets',express.static(__dirname + '/assets'));
 
 // Ruta para renderizar main.hbs en la raíz '/'
 app.get('/', (req, res) => {
-  res.render('main', { productos }); // Renderizar main.hbs y pasar los datos de productos
+  res.render('home', { productos }); // Renderizar main.hbs y pasar los datos de productos
 });
 
 // Iniciar el servidor
