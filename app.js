@@ -37,11 +37,11 @@ app.engine( //app.engine() es un método que permite configurar el motor de plan
 // Middleware para servir archivos estáticos
 app.use('/bootstrap',express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist'));
-app.use('/assets',express.static(__dirname + '/assets'));
+app.use('/assets',express.static("assets"));
 
 // Ruta para renderizar main.hbs en la raíz '/'
 app.get('/', (req, res) => {
-  res.render('home', { productos }); // Renderizar main.hbs y pasar los datos de productos
+  res.render('home', { productos : productos });
 });
 
 // Iniciar el servidor

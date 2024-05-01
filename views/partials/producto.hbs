@@ -1,4 +1,8 @@
-<div class="producto">
-    <h3>{{nombre}}</h3>
-    <img src="{{imagen}}" alt="{{nombre}}">
+{{#each productos.articulos}}
+    <div class="card" style="width: 18rem;">
+  <img src="{{this.imagen}}" class="card-img-top" alt="#">
+  <div class="card-body">
+    <h5 class="card-title">{{this.nombre}}</h5>
+  </div>
 </div>
+{{/each}}

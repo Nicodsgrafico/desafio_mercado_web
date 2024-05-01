@@ -1,13 +1,4 @@
-<!-- dashboard.hbs -->
-
-<div class="container-fluid d-flex justify-content-center flex-column align-items-center">
+<div class="container-fluid">
     <h2>Bienvenido al mercado WEB, seleccione sus productos</h2>
-    <ul class="d-flex flex-row">
-        {{#each listado.articulos}} <!-- Iterar sobre el array de productos -->
-            <li class="list-unstyled text-center">
-                <img src="{{this.imagen}}" alt="{{this.nombre}}" style="width: 100px;"> <!-- Mostrar la imagen -->
-                <p>{{this.nombre}}</p> <!-- Mostrar el nombre del producto -->
-            </li>
-        {{/each}}
-    </ul>
+        {{> producto}}
 </div>
